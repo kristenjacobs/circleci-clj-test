@@ -7,4 +7,5 @@
   :plugins      [[lein-cloverage "1.0.6"]]
   :main ^:skip-aot circleci-clj-test.core
   :target-path "target/%s"
+  :test2junit-output-dir ~(or (System/getenv "CIRCLE_TEST_REPORTS") "target/test2junit")
   :profiles {:uberjar {:aot :all}})
