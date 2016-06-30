@@ -11,7 +11,6 @@ test:
     - lein test2junit
     - lein uberjar
     - docker build -t kristenfjacobs/circleci-clj-test .
-    - docker push kristenfjacobs/circleci-clj-test
 
 deployment:
   production:
