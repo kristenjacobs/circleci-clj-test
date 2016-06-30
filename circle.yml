@@ -11,3 +11,13 @@ test:
     - lein test2junit
     - lein uberjar
     - docker build -t kristenjacobs/circle-clj-test .
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - docker run kristenjacobs/circleci-clj-test
+  staging:
+    branch: master
+    commands:
+      - docker run kristenjacobs/circleci-clj-test
