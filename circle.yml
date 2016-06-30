@@ -1,3 +1,4 @@
 test:
   override:
     - lein test2junit
+    - lein uberjar
