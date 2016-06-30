@@ -6,12 +6,8 @@ machine:
   services:
     - docker
 
-dependencies:
-  override:
-    - docker info
-    - docker build -t kristenjacobs/circle-clj-test .
-
 test:
   override:
     - lein test2junit
     - lein uberjar
+    - docker build -t kristenjacobs/circle-clj-test .
