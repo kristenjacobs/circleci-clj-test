@@ -1,3 +1,7 @@
+general:
+  artifacts:
+    - "target/uberjar/circleci-clj-test-0.1.0-SNAPSHOT-standalone.jar"
+
 test:
   override:
     - lein test2junit
