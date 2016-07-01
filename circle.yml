@@ -1,7 +1,6 @@
 general:
   artifacts:
     - "target/uberjar/circleci-clj-test-0.1.0-SNAPSHOT-standalone.jar"
-    - "target/coverage"
 
 machine:
   services:
@@ -13,6 +12,9 @@ test:
     - lein cloverage
     - lein uberjar
     - docker build -t kristenfjacobs/circleci-clj-test .
+  post:
+    - mkdir $CIRCLE_ARTIFACTS/coverage
+    - mv target/coverage $CIRCLE_ARTIFACTS/
 
 deployment:
   staging:
