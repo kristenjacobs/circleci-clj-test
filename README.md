@@ -1,6 +1,6 @@
 # circleci-clj-test
 
-FIXME: description
+FIXME: description: hello
 
 ## Installation
 
