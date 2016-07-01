@@ -15,9 +15,7 @@ test:
     - docker build -t kristenfjacobs/circleci-clj-test .
 
 deployment:
-  deploy:
+  staging:
+    branch: master
     commands:
-      - echo "Deploying to staging environment"
-      - docker run kristenfjacobs/circleci-clj-test
-      - echo "Deploying to production environment"
       - docker run kristenfjacobs/circleci-clj-test
